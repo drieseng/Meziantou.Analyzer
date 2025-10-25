@@ -1,4 +1,3 @@
-#pragma warning disable CS1591
 namespace Meziantou.Analyzer.Annotations;
 
 /// <summary>
@@ -17,9 +16,11 @@ public sealed class CultureInsensitiveTypeAttribute : System.Attribute
     /// This can be applied on a given type to mark all its formats as culture insensitive.
     /// </remarks>
     public CultureInsensitiveTypeAttribute() { }
+
     /// <summary>
     /// Initializes a new instance of the <see cref="CultureInsensitiveTypeAttribute"/> class with the specified format.
     /// </summary>
+    /// <param name="format">The format to mark as culture insensitive.</param>
     /// <remarks>
     /// This can be applied on a given type to mark the specified format as culture insensitive for that type.
     /// </remarks>
@@ -37,7 +38,7 @@ public sealed class CultureInsensitiveTypeAttribute : System.Attribute
     /// <summary>
     /// Initializes a new instance of the <see cref="CultureInsensitiveTypeAttribute"/> class with the specified <see cref="Type"/>.
     /// </summary>
-    /// <param name="type">The <see cref="Type"/> for which to mark all formats as culture insensitive </param>
+    /// <param name="type">The <see cref="Type"/> for which to mark all formats as culture insensitive.</param>
     /// <remarks>
     /// This can be applied on an <see cref="System.Reflection.Assembly"/> to mark all formats of the specified <see cref="Type"/> as culture insensitive.
     /// </remarks>
@@ -46,8 +47,8 @@ public sealed class CultureInsensitiveTypeAttribute : System.Attribute
     /// <summary>
     /// Initializes a new instance of the <see cref="CultureInsensitiveTypeAttribute"/> class with the specified <see cref="Type"/> and format.
     /// </summary>
-    /// <param name="type">The <see cref="Type"/> for which to mark the specified format as culture insensitive </param>
-    /// <param name="format">The format to mark as culture insensitive </param>
+    /// <param name="type">The <see cref="Type"/> for which to mark the specified format as culture insensitive.</param>
+    /// <param name="format">The format to mark as culture insensitive.</param>
     /// <remarks>
     /// This can be applied on an <see cref="System.Reflection.Assembly"/> to mark the format of the specified <see cref="Type"/> as culture insensitive.
     /// </remarks>
@@ -57,7 +58,7 @@ public sealed class CultureInsensitiveTypeAttribute : System.Attribute
     /// <summary>
     /// Initializes a new instance of the <see cref="CultureInsensitiveTypeAttribute"/> class.
     /// </summary>
-    /// <param name="type">The <see cref="Type"/> for which to mark the <c>ToString()</c> method as culture insensitive </param>
+    /// <param name="type">The <see cref="Type"/> for which to mark the <c>ToString()</c> method as culture insensitive.</param>
     /// <param name="isDefaultFormatCultureInsensitive">When <see langword="true"/>, marks the default format (i.e., the <c>ToString()</c> method) of <paramref name="type"/> as culture insensitive.</param>
     /// <remarks>
     /// This can be applied on an <see cref="System.Reflection.Assembly"/> to mark the default format (i.e., the <c>ToString()</c> method) of <paramref name="type"/> as culture insensitive.
